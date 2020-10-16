@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title> Contact us </title>
+	<link href="spookiestyle.css" type="text/css" rel="stylesheet">
+	<style type="text/css">
+		.center 
+		{
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+        }
+        h1 {
+            text-align: center;
+            font-size: x-large;
+            margin:0;
+            padding:0;
+        }
+        h2 {
+            padding-top: 30px;
+            text-align: center;
+            font-size: small;
+            font-weight: lighter;
+            color: #4FF136;
+            margin-bottom: 0%;
+        }
+        h3 {
+            text-align: center;
+            font-size: small;
+            font-family:"Luminari", cursive;
+            font-weight: lighter;
+        }
+        input[type=text], input[type=password], input[type=email], textarea {
+            width: 100%;
+            font-family: "Luminari", cursive;
+            padding: 12px;  
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box; 
+            margin-top: 6px; 
+            margin-bottom: 16px; 
+            resize: vertical 
+        }
+        input[type=submit] {
+            font-family: "Luminari", cursive;
+            background-color: #4FF136;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        div {
+            width: 70%;
+            margin-left: auto; margin-right: auto;
+            margin-bottom:30px;
+            padding: 20px 20px;
+            border: 3px solid #FC8324;
+   }
+        
+	</style>
+</head>
+<body>
+	<header>
+        <a href="#"> <img src="SpookiesLogo.png" alt="logo" class = "center"></a>
+        <style type="text/css">
+            input[type="button"] {font-size: 28px;}
+        </style>
+        <script language="javascript">
+            function validateForm() {
+                var fname = document.forms["contactForm"]["fname"].value;
+                if (fname == "") {
+                    alert("First name must be filled out");
+                    return false;
+                }
+                var lname = document.forms["contactForm"]["lname"].value;
+                if (lname == "") {
+                    alert("Last name must be filled out");
+                    return false;
+                }
+                var email = document.forms["contactForm"]["email"].value;
+                if (email == "") {
+                    alert("Email must be filled out");
+                    return false;
+                }
+            } 
+        </script>
+	</header>	
+	<nav class="nav">
+		<ul>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Shop Candy</a></li>
+			<li><a href="#">Contact Us</a></li>
+			<li><a href="SpookiesCareers.html">Careers</a></li>
+		</ul>
+	</nav>
+	<main>
+        <h2>GOT A QUESTION?</h2>
+        <h1> Contact Spookies</h1>
+        <h3> We're here to help and answer any question you might have.
+             <br />We look forward to hearing from you
+        </h3>
+        <div class="container">
+            <form name= "contactForm" action="action_page.php"
+                onsubmit="return validateForm()" method="post">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="Insert First Name">
+          
+              <label for="lname" >Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Insert Last Name">
+          
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your Email">
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div> 
+          <h1 style="margin: 20px 20px;"> Validation Form </h1>
+          <div class="container">
+            <form name="valForm" action="/action_page.php"
+            onsubmit="return validateForm()" method="POST">
+              <h1> VALIDATION FORM </h1>
+              <label for="name"> Name</label>
+              <input type="text" id="name" name="name" placeholder="Insert Name">
+    
+          
+              <label for="address" >Address</label>
+              <input type="text" id="lname" name="lastname" placeholder="Insert Address">
+              
+
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Enter your Email">
+              
+
+              <label for="Password">Subject</label>
+              <input type="password" id="Password" name="password" placeholder="Enter a Password"></input>
+              
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div> 
+	</main>
+	<footer>
+			<ul class="footernav">
+				<li><a href="#">Find a Store</a></li>
+				<li><a href="#">Shipping Information</a></li>
+				<li><a href="#">Check Order Status</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+		
+			<!--Social Media/Email Links-->
+			<a href="https://www.facebook.com" target="_blank"> <img id = "footer-image" src="facebookk.png" class = "socialicons">
+			
+			<a href="https://www.instagram.com" target="_blank"> <img id = "footer-image" src="instagramm.png" class = "socialicons">
+
+			<a href="https://www.twitter.com" target="_blank"> <img id = "footer-image" src="twitterr.png" class = "socialicons">
+
+			<a href="https://www.pinterest.com" target="_blank"> <img id = "footer-image" src="pinterestt.png" class = "socialicons">
+
+	</footer>
+
+</body>
+</html>
