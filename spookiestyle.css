@@ -1,7 +1,6 @@
 header
 {
 	text-align:center;
-	background-color:black;
 	color:black;
 }
 
@@ -11,7 +10,7 @@ nav
 	font-size: 18px;
 	font-family:"Luminari", cursive; 
 	color: white;
-	background-color: black;
+	margin-bottom: 30px;
 }
 nav ul
 {
@@ -64,22 +63,22 @@ div
 	font-size: 14px;
 	color:white;
 	font-family: "Luminari", cursive;
-	text-align: right;
+/* 	text-align: right; */
 }
 
 #footer-image
 {
 	margin-left: auto;
-    margin-right: auto;
+    	margin-right: auto;
 }
 
 .socialicons
 {
 	float: right; 			
-	height:28px; width: 28px; 
+	height:25px; width: 25px; 
 	padding: 5px;
 	margin-right: 1%; 
-	margin-bottom: 0.5em;
-	padding-bottom: 50px;
+	/* margin-bottom: 0.5em; */
 	padding-right: 30px;
+	
 }
