@@ -13,11 +13,97 @@
   			margin-right: auto;
   			width: 50%;
 		}
+		.centerimage 
+		{
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 65%;
+		}
+		.collage
+		{
+			display:inline-block;
+			padding-top: 40px;
+			width:50%;
+			opacity: 0.5;
+   			transition: opacity .25s ease-in-out;
+   			-moz-transition: opacity .25s ease-in-out;
+   			-webkit-transition: opacity .25s ease-in-out;
+		}
+		.collage:hover
+		{
+			opacity:1;
+		}
+		.collagediv
+		{
+			display:inline-block;
+			text-align: justify;
+		}
+		.collagediv p
+		{
+			font-family: "Luminari", cursive;
+			font-size:22px;
+			text-align: left;
+			width:500px;
+			height:400px;
+			color:black;
+			padding-top:40px;
+			padding-left:150px;
+		}
+		h1
+		{
+			text-align: center;
+			font-size: 40px;
+			font-family:"Luminari", cursive;
+		}
+		h2
+		{
+			text-align: center;
+			font-family:"Luminari", cursive;
+		}
+		h3
+		{
+			text-align: left;
+			padding-left:100px;
+			font-family:"Luminari", cursive;
+		}
+		h3:hover
+		{
+			color: #4FF136;
+		}
+		.button
+		{
+			color: black;
+			font-family:"Luminari", cursive;
+			font-size: 23px;
+			box-sizing: border-box;
+			background:#FC8324; 
+			padding:12px 28px;
+		}
+		.button:hover
+		{
+			background: #c8e7c5;
+		}
+		.buttondiv
+		{
+			display: inline-block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 60%;
+		}
+		.heading
+		{
+			font-size: 35px;
+			text-align: left;
+			color:black;
+			padding-top:100px;
+			padding-left:150px;
+		}
 	</style>
 </head>
 <body>
 	<header>
-		<a href="index.html"> <img src="SpookiesLogo.png" alt="logo" class = "center"></a>
+		<a href="index.html"> <img src="logoTransparent.png" alt="logo" class = "center"></a>
 	</header>	
 	<nav class="nav">
 		<ul>
@@ -29,38 +115,48 @@
 		</ul>
 	</nav>
 	<main>
-		<h1>Wanna Be a Spooker? Join Us!</h1>
+		<br>
+		<h1>Careers at Spookies</h1>
+		<div class="buttondiv"><a class="button" href="#careers">See Open Positions</a></div>
+		<br>
+		<br>
+		<div class="collagediv">
+		<a> <img src="collage.png" style="float:right" class="collage"></a>
+		<div class="heading">Our Culture</div>	
+		<p>Why work at Spookies? We cultivate a culture of warmth and sweetness. Our mission is to surprise and delight, both our customers and our employees.<br> <br> Our Spookers work tirelessly to awaken the creative spirit and inner child in everyone, making sure that every one of our shops transports its guests to a Tim-Burton version of Willy Wonka’s factory. It houses over 10,000 creepy confections, boasting the largest selection of gooey goodies from around the world.</p>
+		</div>
+	
+		<br>
+		<br>
+		<br>
+		<a> <img src="Benefits.png" class="centerimage"></a>
+		<h2>Open Roles at Spookies</h2>
+		<h3>Sales Associate .........................</h3>
+		<h3>Store Supervisor  .........................</h3>
+		<h3>Candy Maker  .........................</h3>
+		<h3>Warehouse Manager  .........................</h3>
+		<h2 id="careers">Wanna Be a Spooker? Join us!  <a class="button">Apply Now</a></h2>
+
 	</main>
 	<footer>
+			<ul class="footernav">
+				<li><a href="#">Find a Store</a></li>
+				<li><a href="#">Shipping Information</a></li>
+				<li><a href="#">Check Order Status</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</ul>
+		
+			<!--Social Media/Email Links-->
+			<a href="https://www.facebook.com" target="_blank"> <img id = "footer-image" src="facebookk.png" class = "socialicons">
 			
-        <div class="column">
-            <div class="footernav">
-                <li>
-                    <div class="row"> <a href="#">Find a Store</a> </div>
-                    <div class="row"> <a href="#">Shipping Information</a> </div>
-                    <div class="row"> <a href="#">Check Order Status</a> </div>
-                </li>
-            </div>
-        </div>
-        <div class="column">
-            <div class="footernav">
-                <li>
-                    <div class="row"> <a href="#">FAQ</a> </div>
-                    <div class="row"> <a href="#">Privacy Policy</a> </div>   
-                </li>
-            </div>
-        </div>
-        <div class="column">
-            <row>
-                <a href="https://www.facebook.com" target="_blank"> <img id = "footer-image" src="facebookk.png" class = "socialicons">
-                <a href="https://www.instagram.com" target="_blank"> <img id = "footer-image" src="instagramm.png" class = "socialicons">
-                <a href="https://www.twitter.com" target="_blank"> <img id = "footer-image" src="twitterr.png" class = "socialicons"> 
-                <a href="https://www.pinterest.com" target="_blank"> <img id = "footer-image" src="pinterestt.png" class = "socialicons">
-            <!--Social Media/Email Links-->
-            </row>
-            
-        </div>
-    </footer>
+			<a href="https://www.instagram.com" target="_blank"> <img id = "footer-image" src="instagramm.png" class = "socialicons">
+
+			<a href="https://www.twitter.com" target="_blank"> <img id = "footer-image" src="twitterr.png" class = "socialicons">
+
+			<a href="https://www.pinterest.com" target="_blank"> <img id = "footer-image" src="pinterestt.png" class = "socialicons">
+
+	</footer>
 
 </body>
 </html>
