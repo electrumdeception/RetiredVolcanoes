@@ -54,7 +54,7 @@ ul.footernav li
 	padding:10px;
 	padding-left: 80px;
 }
-ul.footernav li a:hover
+div.footernav li a:hover
 {
 	color:#FC8324;
 }
@@ -99,7 +99,6 @@ body {
 	animation-duration:20s;
 	animation-iteration-count: infinite;
 
-	
 }
 
 
