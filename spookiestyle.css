@@ -12,6 +12,7 @@ nav
 	color: white;
 	margin-bottom: 30px;
 }
+
 nav ul
 {
   	list-style-type: none;
@@ -23,6 +24,7 @@ li
 {
 	display:inline;
 }
+
 a
 {
 	text-decoration: none;
@@ -63,13 +65,13 @@ div
 	font-size: 14px;
 	color:white;
 	font-family: "Luminari", cursive;
-
+	/* text-align: right; */
 }
 
 #footer-image
 {
 	margin-left: auto;
-    	margin-right: auto;
+    margin-right: auto;
 }
 
 .socialicons
@@ -81,6 +83,7 @@ div
 	/* margin-bottom: 0.5em; */
 	padding-right: 30px;
 	
+
 }
 
 @keyframes changeB {
@@ -98,7 +101,4 @@ body {
 	animation-name: changeB;
 	animation-duration:20s;
 	animation-iteration-count: infinite;
-
 }
-
-
