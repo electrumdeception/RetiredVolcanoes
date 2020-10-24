@@ -83,10 +83,16 @@
                     return false;
                 }
                 var num = document.forms["contactForm"]["phone"].value;
-                if (parseInt(num) < 1000000000 || parseInt(num) > 9999999999) {
+                if (isNaN(num) || num < 1000000000 || num > 9999999999) {
                     alert("Valid number must be filled out");
                     return false;
                 }
+                var text = document.forms["contactForm"]["subject"].value;
+                if (text == "") {
+                    alert("Subject must be filled out");
+                    return false;
+                }
+                window.alert ("Form has been submitted!");
                 window.confirm("Form has been submitted!");
             } 
         </script>
