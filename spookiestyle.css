@@ -68,8 +68,9 @@ footer
  	font-size: 14px;
 	background-color:black;
 	font-family:"Luminari", cursive;
-	padding-top: 20px;
-	padding-bottom: 40px;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	margin-top: 40px;
 }
 .footernav {
 	width: 70%;
