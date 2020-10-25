@@ -81,7 +81,7 @@ ul.footernav li
 	padding:10px;
 	padding-left: 80px;
 }
-div.footernav li a:hover
+ul.footernav li a:hover
 {
 	color:#FC8324;
 }
