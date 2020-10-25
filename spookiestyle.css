@@ -3,24 +3,47 @@ header
 	text-align:center;
 	color:black;
 }
+body{
+	font-family:"Luminari", cursive;
+	font-size: 14px;
+	color:white;
+}
 
-nav
+.centerMenu{
+		display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+}
+headNav
 {
 	text-align:center; 
 	font-size: 18px;
-	font-family:"Luminari", cursive; 
-	color: white;
-	margin-bottom: 30px;
 }
 
-nav ul
-{
-  	list-style-type: none;
+nav.footerNav ul{
+	list-style-type: none;
   	margin: 0;
-  	padding: 0;
+  	padding: 10px;
+	line-height: 2.0;
 }
 
-li
+nav.headNav
+{
+    text-align:center;
+    font-size: 18px;
+    font-family:"Luminari", cursive;
+    color: white;
+	margin-bottom: 40px;
+}
+nav.headNav ul
+{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+}
+
+nav.headNav li
 {
 	display:inline;
 }
@@ -31,15 +54,30 @@ a
 	color:white;
   	padding: 40px;
 }
-
-nav.nav ul li a:hover 
+.center 
+		{
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+        }
+ul.footerNav {
+	list-style-type: none;
+}
+.footerNav a:hover{
+	color: #4FF136;
+}
+nav.headNav ul li a:hover 
 {
   color: #4FF136;
 }
-
+.SocialIconBar {
+	margin-left: auto;
+  	margin-right: auto;
+}
 h1
 {
-	font-family:"Luminari", cursive;
+/*	font-family:"Luminari", cursive;*/
 	text-align: center;
 	font-size: 35px;
 	margin:0;
@@ -49,7 +87,7 @@ h1
 }
 h2 {
 	text-align: center;
-	font-family:"Luminari", cursive;
+/*	font-family:"Luminari", cursive;*/
 	font-size: 25px;
 	font-weight: lighter;
 	color: #FC8324;
@@ -58,7 +96,7 @@ h2 {
 h3 {
 	text-align: center;
 	font-size: small;
-	font-family:"Luminari", cursive;
+/*	font-family:"Luminari", cursive;*/
 	font-weight: lighter;
 	color: black;
 }
@@ -67,7 +105,7 @@ footer
 {
  	font-size: 14px;
 	background-color:black;
-	font-family:"Luminari", cursive;
+/*	font-family:"Luminari", cursive;*/
 	padding-top: 10px;
 	padding-bottom: 1px;
 	margin-top: 40px;
@@ -75,9 +113,10 @@ footer
 .footernav {
 	width: 70%;
 }
+
 ul.footernav li
 {
-	display:block;
+/*	display:block;*/
 	padding:10px;
 	padding-left: 80px;
 }
@@ -85,13 +124,7 @@ ul.footernav li a:hover
 {
 	color:#FC8324;
 }
-div
-{
-	font-size: 14px;
-	color:white;
-	font-family: "Luminari", cursive;
-	/* text-align: right; */
-}
+
 
 #footer-image
 {
@@ -128,7 +161,7 @@ body {
 }
 p {
 	color: black;
-	font-size: 22px;
+	font-size: 22px
 }
 
 .container {
@@ -137,6 +170,7 @@ p {
             margin-bottom:30px;
             padding: 20px 20px;   
         }
+
 
 @media screen and (max-width: 400px) {
   .top_menu {
