@@ -182,7 +182,7 @@ p {
 	header{
 		float:none;
 		width:100%;
-		height: 70px
+		margin:40px;
 	}
 	iframe{
 		width:100%
