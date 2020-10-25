@@ -5,7 +5,8 @@ header
 	margin:40px;
 }
 body{
-	font-family:"Luminari", cursive;
+	font-family:"Luminari","zsazsa-galore",  cursive ;;
+	font-style: normal;
 	font-size: 14px;
 	color:white;
 }
@@ -33,7 +34,6 @@ nav.headNav
 {
     text-align:center;
     font-size: 18px;
-    font-family:"Luminari", cursive;
     color: white;
 	margin-bottom: 40px;
 }
@@ -53,7 +53,6 @@ a
 {
 	text-decoration: none;
 	color:white;
-  	padding: 40px;
 	display: block;
 }
 .center 
@@ -79,7 +78,7 @@ nav.headNav ul li a:hover
 }
 h1
 {
-/*	font-family:"Luminari", cursive;*/
+
 	text-align: center;
 	font-size: 35px;
 	margin:0;
@@ -89,7 +88,7 @@ h1
 }
 h2 {
 	text-align: center;
-/*	font-family:"Luminari", cursive;*/
+
 	font-size: 25px;
 	font-weight: lighter;
 	color: #FC8324;
@@ -98,7 +97,7 @@ h2 {
 h3 {
 	text-align: center;
 	font-size: small;
-/*	font-family:"Luminari", cursive;*/
+
 	font-weight: lighter;
 	color: black;
 }
@@ -107,7 +106,7 @@ footer
 {
  	font-size: 14px;
 	background-color:black;
-/*	font-family:"Luminari", cursive;*/
+
 	padding-top: 10px;
 	padding-bottom: 1px;
 	margin-top: 40px;
@@ -200,7 +199,10 @@ p {
 		width:75%;
 	}
 	nav a {
-		padding : 10px;
+		padding : 10px;	
+	}
+	nav ul{
+		line-height: 2.0
 	}
 	header{
 		margin:20px;
