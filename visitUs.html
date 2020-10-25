@@ -3,7 +3,7 @@
 <head>
 	<meta charset = "utf-8">
 	<meta name="keywords" content="Candy, Halloween,Online Shopping, Chocolate, Caramel, Sugar">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=|">
 	<title> Visit us </title>
 	<link href="spookiestyle.css" type="text/css" rel="stylesheet">
 	<title>Visit Us</title>	
@@ -15,10 +15,38 @@
   			margin-right: auto;
   			width: 50%;
 		}
-		 article 
+		article 
 		{
             		margin-bottom: 30px;
-       	    	}
+       	}
+
+       	.map
+       	{
+       		margin:0 auto;
+       		padding-left:200px;
+       	}
+
+       	.factoryCollage
+       	{
+       		opacity: 0.5;
+   			transition: opacity .25s ease-in-out;
+   			-moz-transition: opacity .25s ease-in-out;
+   			-webkit-transition: opacity .25s ease-in-out;
+       	}
+       	.factoryCollage:hover
+		{
+			opacity:1;
+		}
+       	.directions
+       	{
+       		width:550px;
+       	}
+       
+       	.note
+       	{
+       		padding-left:130px;
+       	}
+
 	</style>
 	</style>
 </head>
@@ -38,18 +66,31 @@
 		</ul>
 	</nav>
 	<main>
-		<h1>Visit us at our Factory</h1>
-		<article style = "border:2px solid #000000">
-		<p>Notice: Unfortunately our factory tours have been cancelled due to COVID-19. All of our efforts are concentrated on bringing you safe spookies this holiday season. We hope to see you again soon</p>
+		<h1>Tour Our Factory!</h1>
+
+		<p class="note" style="width:75%"><span style="color:#FC8324" style="font-size: 25px">NOTE:</span> We care about the health of our customers and fellow Spookers. Our factory tours have been cancelled due to COVID-19, and all of our efforts are concentrated on bringing you safe Spookies this holiday season. We look forward to seeing you again soon!</p><br>
 			
+	<article class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.77967654684!2d-122.69614058439252!3d47.66927637918896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54903aceed3a32ad%3A0xa96af61c1cd212a0!2sRandom%20Pl%20NW%2C%20Silverdale%2C%20WA%2098383!5e0!3m2!1sen!2sus!4v1602826121403!5m2!1sen!2sus" width="500" height="375" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 	</article>
-	<article>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.77967654684!2d-122.69614058439252!3d47.66927637918896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54903aceed3a32ad%3A0xa96af61c1cd212a0!2sRandom%20Pl%20NW%2C%20Silverdale%2C%20WA%2098383!5e0!3m2!1sen!2sus!4v1602826121403!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-		<p>Getting here by car:</p>
-		<p>Getting here by foot:</p>
-		<p>Getting here by public transit:</p>
-		<p>Getting here by broomstick:</p>
-	</article>
+
+		<br>
+		<a> <img class="factoryCollage" style="float: right; margin: 106px -120px 0px 75px;" src="factoryCollage.png" width="60%"></a>
+		<!-- <div class="factoryCollageDiv"> -->
+		<h2 style="text-align:left">Directions:</h2>
+			<p class="directions">1. Head toward <span style="color:#4FF136">Deception Pass Bridge</span>. Underneath it you will find a gnome guarding the entrance to the <span style="color:#4FF136">Cookie Cave</span>. <br> 
+									2. Promise him Spookies on your way back - he will let you through. <br>
+									3. Once through the Cookie Cave take 150 steps north, then 250 steps east through the <span style="color:#4FF136">Wicked Woods</span>. <br>
+									4. Watch out for the werewolves. <br>
+									5. Continue east until you see <span style="color:#4FF136">Maleficent Mountain</span>. Climb to the top and grab the shiny key with the emerald jewel shaped like a lollipop. <br> 
+									6. Descend from the mountain and look for the Hobbit-like door in the tree nearby. <br>
+									7. Use the key to unlock ... <span style="color:#4FF136">you made it!</span>
+			</p>
+		</p>
+
+	<!-- </div> -->
+
+
 	</main>
 	</div>
 	<footer>
