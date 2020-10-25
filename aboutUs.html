@@ -2,18 +2,55 @@
 <html>
 <head>
 	<meta charset = "utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=|">
 	<title>about us</title>
 	<meta name="keywords" content="Candy, Halloween,Online Shopping, Chocolate, Caramel, Sugar">
 	<link href="spookiestyle.css" type="text/css" rel="stylesheet">
 	<title>About Us</title>
+	<style type="text/css">
 
+		.center 
+		{
+  			display: block;
+  			margin-left: auto;
+  			margin-right: auto;
+  			width: 50%;
+		}
+		p
+		{
+			margin-right:40px;
+			margin-left:40px;
+		}
+		.gallery
+		{ 
+			width:30%;
+			margin-bottom: 0.5em;
+			padding-bottom: 30px;
+			padding-right: 80px;
+			margin-left: -30px;
+			margin-right: -30px;
+			-webkit-transform: scale(1.2);
+			transform: scale(1.2);
+			-webkit-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
+		}
+		.gallery:hover  
+		{
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+		.galleryDiv
+		{
+			margin:0 auto;
+			padding-left: 80px;
+		}
+	</style>
 </head>
 <body>
 	<header>
 		<a href="index.html"> <img src="logoTransparent.png" alt="logo" class = "center"></a>
-		
-	<nav class="headNav">
+	</header>	
+	<nav class="nav">
 		<ul>
 			<li><a href="aboutUs.html">About</a></li>
 			<li><a href="shopCandy.html">Shop Candy</a></li>
@@ -22,49 +59,53 @@
 			<li><a href="visitUs.html">Visit Us</a></li>
 		</ul>
 	</nav>
-	</header>
 	<main>
 		<div class="container">
 			<h1>About Spookies</h1>
 			<article>
-				<h2>Spookie History</h2>
-				<p>Spookies candy company was founded in 1952. We are the best Halloween focused 
-					candy manufacturer in the Northeast. Our founders believed in celebrating the 
-					spirit of Halloween year round and we have work to fulfill that mission every day.</p>
-			</article>
+				<h2>Our History</h2>
+				<p><span style="color:#4FF136">Spookies Candy Co.</span> was founded in 1952 in a quaint town in rural Transylvania. Over the last 50+ years we have grown to be the best and most innovative Halloween-focused brand in the world (at least according to Ripley's Believe It or Not). Our founders believed in embracing the spirit of Halloween year-round, and we work to fulfill that mission every single day!</p> <br> <br>
 
-			<article> 
-				<h2>Spookie Founders</h2>
-				<p>Gerdtrude and Charles Gurtz were the most preminate lawyers in Boston when they realized their true passion of confectionary science. They loved
-				the joy that halloween brought their children each fall and decided to bring that joy to the rest of the year.
-				With their modest savings they turned their small law office into the first Spookies Factory and the rest is history. </p>
+				<div class="galleryDiv">
+				<img src = "founders.jpeg" alt = "gallery1" class = "gallery">
+				<img src = "founders2.png" alt = "gallery2" class = "gallery">
+				<img src = "founders3.png" alt = "gallery3" class = "gallery">
+				</div>
+ 
+				<h2>The Founding of Spookies</h2>
+				<p><span style="color:#4FF136">Gerdtrude and Charles Gurtz</span> were the world's preeminent chemists when they realized their true passion of confectionary science. They saw the joy that Halloween brought their children each fall and decided that the feelings of thrill, intrigue, and sweetness should be experienced for the rest of the year. With their modest savings they turned their small chemistry lab into the first Spookies Factory... <span style="color:#4FF136">and the rest is history!</span> </p> <br> <br>
+				<div class="galleryDiv">
+				<img src = "history1.jpg" alt = "gallery1" class = "gallery">
+				<img src = "history2.jpeg" alt = "gallery2" class = "gallery">
+				<img src = "history3.png" alt = "gallery3" class = "gallery">
+				</div>
 			</article>
 		</div>
 	</main>
 
-		<footer>
-        <nav class="footerNav">
-                <ul>
-                   <li><a href="#">Find a Store</a></li>
-                   <li><a href="#">Shipping Information</a></li>
-                   <li><a href="#">Check Order Status</a> </li>
-                    <li><a href="#">FAQ</a> </li>
-                    <li><a href="#">Privacy Policy</a> </li> 
-                </ul>
-            </nav>
-        <div >
-			<table class="SocialIconBar">
-            <tr>
-				<td>Spooskies Candy Company &reg;, 2020</td>
-              	<td><a href="https://www.facebook.com" target="_blank"> <img alt = "facebook" src="facebookk.png" class = "socialicons"></a></td>
-               <td> <a href="https://www.instagram.com" target="_blank"> <img  src="instagramm.png" alt = "instagram" class = "socialicons"></a></td>
-                <td><a href="https://www.twitter.com" target="_blank" ><img alt = "twitter" src="twitterr.png" class = "socialicons"></a></td>
-                <td><a href="https://www.pinterest.com" target="_blank"> <img alt = "pinterest" src="pinterestt.png" class = "socialicons"></a></td>
+	<footer>
+			
+       			
+            <div class="footernav">
+                <li>
+                    <div class="row"> <a href="#">Find a Store</a> </div>
+                    <div class="row"> <a href="#">Shipping Information</a> </div>
+                    <div class="row"> <a href="#">Check Order Status</a> </div>
+                    <div class="row"> <a href="#">FAQ</a> </div>
+                    <div class="row"> <a href="#">Privacy Policy</a> </div>   
+                </li>
+            </div>
+        
+       
+                <a href="https://www.facebook.com" target="_blank"> <img id = "footer-image" src="facebookk.png" class = "socialicons">
+                <a href="https://www.instagram.com" target="_blank"> <img id = "footer-image" src="instagramm.png" class = "socialicons">
+                <a href="https://www.twitter.com" target="_blank"> <img id = "footer-image" src="twitterr.png" class = "socialicons"> 
+                <a href="https://www.pinterest.com" target="_blank"> <img id = "footer-image" src="pinterestt.png" class = "socialicons">
             <!--Social Media/Email Links-->
-            </tr>
-			</table>
+           
             
-        </div>
+     
     </footer>
+
 </body>
 </html>
