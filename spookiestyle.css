@@ -107,8 +107,7 @@ div
 	margin-right: 1%; 
 	/* margin-bottom: 0.5em; */
 	padding-right: 30px;
-	
-
+	padding-bottom:10px;
 }
 
 @keyframes changeB {
