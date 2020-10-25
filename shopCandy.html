@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Shop Candy!</title>
+	<link href="spookiestyle.css" type="text/css" rel="stylesheet">
+	<style type="text/css">
+		.center {
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+			width:50%;
+		}
+		#buttonContainer {
+			text-align:center;
+		}
+		.button {
+			padding:10px;
+			margin:1em 2px;
+			border:none;
+			border-radius:50%;
+		}
+		#button1 {
+			background-color:#FFFFFF;
+		}
+		#button2 {
+			background-color:#FC8324;
+		}
+		table {
+			margin-left:auto;
+			margin-right:auto;
+			border:none;
+			border-spacing:3em;
+		}
+		td {
+			border:1px solid black;
+			padding:4em;
+		}
+
+  </style>
+
+  <script language="javascript">
+		function hideSubs() {
+			document.getElementById("subscriptions").style.display = "none";
+		}
+
+		function toggle1() {
+			document.getElementById("button1").style.backgroundColor = "#FFFFFF";
+			document.getElementById("button2").style.backgroundColor = "#FC8324";
+			document.getElementsByTagName("h1")[0].innerHTML = "SHOP";
+			document.getElementsByTagName("h2")[0].innerHTML =
+			"Our very best selection for Halloween!";
+			document.getElementById("shop").style.display = "block";
+			document.getElementById("subscriptions").style.display = "none";
+		}
+
+		function toggle2() {
+			document.getElementById("button2").style.backgroundColor = "#FFFFFF";
+			document.getElementById("button1").style.backgroundColor = "#FC8324";
+			document.getElementsByTagName("h1")[0].innerHTML = "SUBSCRIBE";
+			document.getElementsByTagName("h2")[0].innerHTML =
+			"For even more treats!";
+			document.getElementById("shop").style.display = "none";
+			document.getElementById("subscriptions").style.display = "block";
+		}
+  </script>
+</head>
+
+<header>
+  <a href="index.html">
+		<img src="logoTransparent.png" alt="logo" class="center">
+	</a>
+	<nav class="nav">
+		<ul>
+			<li><a href="aboutUs.html">About</a></li>
+			<li><a href="#">Shop Candy</a></li>
+			<li><a href="SpookiesContact.html">Contact Us</a></li>
+			<li><a href="SpookiesCareers.html">Careers</a></li>
+			<li><a href= "visitUs.html">Visit Us</a></li>
+		</ul>
+	</nav>
+</header>
+
+<body onload="hideSubs()">
+	<main>
+    <h1>SHOP</h1>
+		<h2>Our very best selection for Halloween!</h2>
+		<div id="buttonContainer">
+			<button class="button" id="button1" onclick="toggle1()"></button>
+			<button class="button" id="button2" onclick="toggle2()"></button>
+		</div>
+      <div class="container">
+				<div id="shop">
+					<table>
+						<tr>
+							<td>Product 1</td>
+							<td>Product 2</td>
+							<td>Product 3</td>
+						</tr>
+						<tr>
+							<td>Product 4</td>
+							<td>Product 5</td>
+							<td>Product 6</td>
+						</tr>
+						<tr>
+							<td>Product 7</td>
+							<td>Product 8</td>
+							<td>Product 9</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="subscriptions">
+					<table>
+						<table>
+							<tr>
+								<td>Subscription 1</td>
+								<td>Subscription 2</td>
+								<td>Subscription 3</td>
+							</tr>
+						</table>
+					</table>
+				</div>
+			</div>
+	</main>
+
+	<footer>
+  	<div class="column">
+      <div class="footernav">
+        <li>
+          <div class="row"> <a href="#">Find a Store</a> </div>
+          <div class="row"> <a href="#">Shipping Information</a> </div>
+          <div class="row"> <a href="#">Check Order Status</a> </div>
+        </li>
+    	</div>
+    </div>
+    <div class="column">
+      <div class="footernav">
+        <li>
+          <div class="row"> <a href="#">FAQ</a> </div>
+          <div class="row"> <a href="#">Privacy Policy</a> </div>
+        </li>
+      </div>
+    </div>
+    <div class="column">
+      <row>
+        <a href="https://www.facebook.com" target="_blank"> <img id = "footer-image" src="facebookk.png" class = "socialicons">
+        <a href="https://www.instagram.com" target="_blank"> <img id = "footer-image" src="instagramm.png" class = "socialicons">
+        <a href="https://www.twitter.com" target="_blank"> <img id = "footer-image" src="twitterr.png" class = "socialicons">
+        <a href="https://www.pinterest.com" target="_blank"> <img id = "footer-image" src="pinterestt.png" class = "socialicons">
+            <!--Social Media/Email Links-->
+      </row>
+    </div>
+  </footer>
+</body>
+</html>
