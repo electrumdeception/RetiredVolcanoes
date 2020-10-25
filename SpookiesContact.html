@@ -7,13 +7,6 @@
 	<meta name="keywords" content="Candy, Halloween,Online Shopping, Chocolate, Caramel, Sugar">
 	<link href="spookiestyle.css" type="text/css" rel="stylesheet">
 	<style type="text/css">
-		.center 
-		{
-  			display: block;
-  			margin-left: auto;
-  			margin-right: auto;
-  			width: 50%;
-        }
         h1 {
             text-align: center;
             font-size: x-large;
@@ -22,7 +15,6 @@
         }
         h2 {
             text-align: center;
-            font-size: small;
             font-weight: lighter;
             color: #FC8324;
             margin-bottom: 0%;
@@ -30,12 +22,10 @@
         h3 {
             text-align: center;
             font-size: small;
-            font-family:"Luminari", cursive;
             font-weight: lighter;
         }
         input[type=text], input[type=tel], input[type=email], textarea {
             width: 100%;
-            font-family: "Luminari", cursive;
             padding: 12px;  
             border: 1px solid #ccc; 
             border-radius: 4px; 
@@ -45,32 +35,93 @@
             resize: vertical 
         }
         input[type=submit] {
-            font-family: "Luminari", cursive;
             background-color: #4FF136;
             color: white;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-        }
-        
-        .container {
-            width: 70%;
-            margin-left: auto; margin-right: auto;
-            margin-bottom:30px;
-            padding: 20px 20px;
-           
-        }
-        
-        
+			font-size: 28px;
+		}
+		ul.headNav
+{
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+}
 	</style>
 </head>
 <body>
 	<header>
         <a href="index.html"> <img src="logoTransparent.png" alt="logo" class = "center"></a>
-        <style type="text/css">
-            input[type="button"] {font-size: 28px;}
-        </style>
+  
+	</header>
+
+	<nav class="headNav">
+		<ul>
+			<li><a href="aboutUs.html">About</a></li>
+			<li><a href="shopCandy.html">Shop Candy</a></li>
+			<li><a href="SpookiesContact.html">Contact Us</a></li>
+			<li><a href="SpookiesCareers.html">Careers</a></li>
+			<li><a href= "visitUs.html">Visit Us</a></li>
+		</ul>
+	</nav>
+
+	<main>
+        <h1>GOT A QUESTION?</h1>
+        <h2>Contact Spookies</h2>
+        <h3>We're here to help and answer any question you might have.
+             <br/>We look forward to hearing from you
+        </h3>
+        
+            <form name= "contactForm" 
+                onsubmit="return validateForm()" method="post" >
+          
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Insert First Name">
+          
+                <label for="lname" >Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Insert Last Name">
+          
+                <label for="phone"> Phone Number </label>
+                <input type="tel" id="phone" name="phone" placeholder="Insert Phone Number"> 
+          
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email">
+              
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                <input type="submit" value="Submit" onclick="">
+            </form>
+          </div> 
+          
+              
+	</main>
+	<footer>
+        <nav class="footerNav">
+                <ul>
+                   <li><a href="#">Find a Store</a></li>
+                   <li><a href="#">Shipping Information</a></li>
+                   <li><a href="#">Check Order Status</a> </li>
+                    <li><a href="#">FAQ</a> </li>
+                    <li><a href="#">Privacy Policy</a> </li> 
+                </ul>
+            </nav>
+        <div >
+			<table class="SocialIconBar">
+            <tr>
+				<td>Spooskies Candy Company &reg;, 2020</td>
+              	<td><a href="https://www.facebook.com" target="_blank"> <img alt = "facebook" src="facebookk.png" class = "socialicons"></a></td>
+               <td> <a href="https://www.instagram.com" target="_blank"> <img  src="instagramm.png" alt = "instagram" class = "socialicons"></a></td>
+                <td><a href="https://www.twitter.com" target="_blank" ><img alt = "twitter" src="twitterr.png" class = "socialicons"></a></td>
+                <td><a href="https://www.pinterest.com" target="_blank"> <img alt = "pinterest" src="pinterestt.png" class = "socialicons"></a></td>
+            <!--Social Media/Email Links-->
+            </tr>
+			</table>
+            
+        </div>
+    </footer>
+      
         <script language="javascript">
             function validateForm() {
                 var fname = document.forms["contactForm"]["fname"].value;
@@ -97,77 +148,5 @@
     
             } 
         </script>
-	</header>	
-	<nav class="nav">
-		<ul>
-			<li><a href="aboutUs.html">About</a></li>
-			<li><a href="shopCandy.html">Shop Candy</a></li>
-			<li><a href="SpookiesContact.html">Contact Us</a></li>
-			<li><a href="SpookiesCareers.html">Careers</a></li>
-			<li><a href= "visitUs.html">Visit Us</a></li>
-		</ul>
-	</nav>
-	<main>
-        <h1>GOT A QUESTION?</h1>
-        <h2> Contact Spookies</2>
-        <h3> We're here to help and answer any question you might have.
-             <br />We look forward to hearing from you
-        </h3>
-        <div class="container">
-            <form name= "contactForm" 
-                onsubmit="return validateForm()" method="post" >
-          
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="fname" placeholder="Insert First Name">
-          
-                <label for="lname" >Last Name</label>
-                <input type="text" id="lname" name="lname" placeholder="Insert Last Name">
-          
-                <label for="phone"> Phone Number </label>
-                <input type="tel" id="phone" name="phone" placeholder="Insert Phone Number"> 
-          
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your Email">
-              
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-          
-                <input type="submit" value="Submit" onclick="">
-            </form>
-          </div> 
-          
-              
-	</main>
-	<footer>
-			
-        <div class="column">
-            <div class="footernav">
-                <li>
-                    <div class="row"> <a href="#">Find a Store</a> </div>
-                    <div class="row"> <a href="#">Shipping Information</a> </div>
-                    <div class="row"> <a href="#">Check Order Status</a> </div>
-                </li>
-            </div>
-        </div>
-        <div class="column">
-            <div class="footernav">
-                <li>
-                    <div class="row"> <a href="#">FAQ</a> </div>
-                    <div class="row"> <a href="#">Privacy Policy</a> </div>   
-                </li>
-            </div>
-        </div>
-        <div class="column">
-            <row>
-                <a href="https://www.facebook.com" target="_blank"> <img id = "footer-image" src="facebookk.png" class = "socialicons">
-                <a href="https://www.instagram.com" target="_blank"> <img id = "footer-image" src="instagramm.png" class = "socialicons">
-                <a href="https://www.twitter.com" target="_blank"> <img id = "footer-image" src="twitterr.png" class = "socialicons"> 
-                <a href="https://www.pinterest.com" target="_blank"> <img id = "footer-image" src="pinterestt.png" class = "socialicons">
-            <!--Social Media/Email Links-->
-            </row>
-            
-        </div>
-    </footer>
-
 </body>
 </html>
