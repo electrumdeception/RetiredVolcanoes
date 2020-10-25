@@ -186,6 +186,8 @@ p {
 /*		height: 70px*/
 		padding: 0px;
 	}
+	img {
+		width: 50%;
 	header a{
 		padding:15px;
 	}
