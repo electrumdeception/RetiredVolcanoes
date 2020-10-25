@@ -2,6 +2,7 @@ header
 {
 	text-align:center;
 	color:black;
+	margin:40px;
 }
 body{
 	font-family:"Luminari", cursive;
@@ -172,7 +173,7 @@ p {
         }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width : 396px ){
   .top_menu {
     float:left;
 	  padding: none;
@@ -182,6 +183,7 @@ p {
 	header{
 		float:none;
 		width:100%;
+/*		height: 70px*/
 		margin:40px;
 	}
 	iframe{
@@ -190,7 +192,9 @@ p {
 	table{
 		width:100%
 	}
-	
+	body {
+		width:100%;
+	}
 iframe {
     display: block;
     margin: 0;
