@@ -6,24 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=|">
 	<title> Visit us </title>
 	<link href="spookiestyle.css" type="text/css" rel="stylesheet">
-	<title>Visit Us</title>	
+	<title>Visit Us</title>
 	<style type="text/css">
-		.center 
+		.center
 		{
   			display: block;
   			margin-left: auto;
   			margin-right: auto;
   			width: 50%;
 		}
-		article 
+		article
 		{
+			text-align:center;
             margin-bottom: 30px;
        	}
 
        	.map
        	{
+					display:block;
        		margin:0 auto;
-       		padding-left:280px;
        	}
 
        	.factoryCollage
@@ -42,11 +43,12 @@
        		width:550px;
        		padding-top: 21px;
        	}
-       
+
        	.note
        	{
-       		padding-left:130px;
-       		font-size: 20px;
+       		font-size:20px;
+					text-align:center;
+					display:none;
        	}
        	ol li
        	{
@@ -54,16 +56,36 @@
        		font-size:20px;
        	}
 
-
+				.toggleMessage {
+					color:#FC8324;
+					border:none;
+					background:none;
+					display:block;
+					margin:0 auto;
+					font-size:1.5em;
+					font-family:inherit;
+					font-style:inherit;
+				}
+				.toggleMessage:hover {
+  				color: white;
+				}
 	</style>
-	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<script>
+	$(document).ready(function(){
+		$(".toggleMessage").click(function(){
+			$(".note").slideToggle("slow");
+		});
+	});
+	</script>
 </head>
 <body>
 <!-- 	<div class="container"> -->
 	<header>
 		<a href="index.html"> <img src="logoTransparent.png" alt="logo" class = "center"></a>
 	</header>
-	
+
 		<nav class="headNav">
 		<ul>
 			<li><a href="aboutUs.html">About</a></li>
@@ -76,14 +98,19 @@
 	<div class="container">
 	<main>
 		<h1>Tour Our Factory!</h1>
-		<p class="note" style="width:75%"><span style="color:#FC8324">NOTE:</span> We care about the health of our customers and fellow Spookers. Our factory tours have been cancelled due to COVID-19, and all of our efforts are concentrated on bringing you safe Spookies this holiday season. We look forward to seeing you again soon!</p><br>
-			
+			<button class="toggleMessage">NOTE</button>
+			<p class="note">
+			 We care about the health of our customers and fellow Spookers. Our
+			 factory tours have been cancelled due to COVID-19, and all of our efforts
+			  are concentrated on bringing you safe Spookies this holiday season. We
+				look forward to seeing you again soon!</p><br>
+
 	<article class="map">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.77967654684!2d-122.69614058439252!3d47.66927637918896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54903aceed3a32ad%3A0xa96af61c1cd212a0!2sRandom%20Pl%20NW%2C%20Silverdale%2C%20WA%2098383!5e0!3m2!1sen!2sus!4v1602826121403!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 	</article>
 		<br>
 		<img class="factoryCollage" style="float: right; margin: 106px -120px 0px 105px;" src="factoryCollage.png" alt = "pics of factory" width="60%">
-		
+
 		<!-- <div class="factoryCollageDiv"> -->
 		<h2 style="text-align:left">Directions:</h2>
 			<ol class="directions">
@@ -106,7 +133,7 @@
                    <li><a href="#">Shipping Information</a></li>
                    <li><a href="#">Check Order Status</a> </li>
                     <li><a href="#">FAQ</a> </li>
-                    <li><a href="#">Privacy Policy</a> </li> 
+                    <li><a href="#">Privacy Policy</a> </li>
                 </ul>
             </nav>
         <div >
@@ -120,7 +147,7 @@
             <!--Social Media/Email Links-->
             </tr>
 			</table>
-            
+
         </div>
     </footer>
 <!-- </div> -->
