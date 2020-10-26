@@ -28,13 +28,13 @@
         input[type=text], input[type=tel], input[type=email], textarea {
             font-family:"Luminari",cursive;
 	    width: 100%;
-            padding: 12px;  
-            border: 1px solid #ccc; 
-            border-radius: 4px; 
-            box-sizing: border-box; 
-            margin-top: 6px; 
-            margin-bottom: 16px; 
-            resize: vertical 
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical
         }
         input[type=submit] {
 	font-family:"Luminari",cursive;
@@ -62,6 +62,7 @@
 		<ul>
 			<li><a href="aboutUs.html">About</a></li>
 			<li><a href="shopCandy.html">Shop Candy</a></li>
+			<li><a href="subscribe.html">Subscribe</a></li>
 			<li><a href="SpookiesContact.html">Contact Us</a></li>
 			<li><a href="SpookiesCareers.html">Careers</a></li>
 			<li><a href= "visitUs.html">Visit Us</a></li>
@@ -75,28 +76,28 @@
         <h3>We're here to help and answer any question you might have.
              <br/>We look forward to hearing from you!
         </h3>
-        
+
             <form name= "contactForm"
                 onsubmit="return validateForm()" method="post" >
-          
+
                 <label for="fname">First Name</label>
                 <input type="text" id="fname" name="fname" placeholder="Insert First Name">
-          
+
                 <label for="lname" >Last Name</label>
                 <input type="text" id="lname" name="lname" placeholder="Insert Last Name">
-          
+
                 <label for="phone"> Phone Number </label>
-                <input type="tel" id="phone" name="phone" placeholder="Insert Phone Number"> 
-          
+                <input type="tel" id="phone" name="phone" placeholder="Insert Phone Number">
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your Email">
-              
+
                 <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                 <input type="submit" value="Submit" onclick="">
             </form>
-          
-              
+
+
 	</main>
 		</div>
 	<footer>
@@ -106,7 +107,7 @@
                    <li><a href="#">Shipping Information</a></li>
                    <li><a href="#">Check Order Status</a> </li>
                     <li><a href="#">FAQ</a> </li>
-                    <li><a href="#">Privacy Policy</a> </li> 
+                    <li><a href="#">Privacy Policy</a> </li>
                 </ul>
             </nav>
         <div >
@@ -120,10 +121,10 @@
             <!--Social Media/Email Links-->
             </tr>
 			</table>
-            
+
         </div>
     </footer>
-      
+
         <script language="javascript">
             function validateForm() {
                 var fname = document.forms["contactForm"]["fname"].value;
@@ -147,8 +148,8 @@
                     return false;
                 }
                 window.alert ("Form has been submitted!");
-    
-            } 
+
+            }
         </script>
 </body>
 </html>

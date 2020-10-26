@@ -48,28 +48,23 @@
   </style>
 
   <script language="javascript">
-		function hideSubs() {
-			document.getElementById("subscriptions").style.display = "none";
+		function hideContent() {
+			document.getElementById("shop2").style.display = "none";
 		}
 
 		function toggle1() {
 			document.getElementById("button1").style.backgroundColor = "#FFFFFF";
 			document.getElementById("button2").style.backgroundColor = "#FC8324";
-			document.getElementsByTagName("h1")[0].innerHTML = "SHOP";
-			document.getElementsByTagName("h2")[0].innerHTML =
-			"Our very best selection for Halloween!";
 			document.getElementById("shop").style.display = "block";
-			document.getElementById("subscriptions").style.display = "none";
+			document.getElementById("shop2").style.display = "none";
 		}
 
 		function toggle2() {
 			document.getElementById("button2").style.backgroundColor = "#FFFFFF";
 			document.getElementById("button1").style.backgroundColor = "#FC8324";
-			document.getElementsByTagName("h1")[0].innerHTML = "SUBSCRIBE";
-			document.getElementsByTagName("h2")[0].innerHTML =
 			"For even more treats!";
 			document.getElementById("shop").style.display = "none";
-			document.getElementById("subscriptions").style.display = "block";
+			document.getElementById("shop2").style.display = "block";
 		}
 
   </script>
@@ -83,6 +78,7 @@
 		<ul>
 			<li><a href="aboutUs.html">About</a></li>
 			<li><a href="shopCandy.html">Shop Candy</a></li>
+			<li><a href="subscribe.html">Subscribe</a></li>
 			<li><a href="SpookiesContact.html">Contact Us</a></li>
 			<li><a href="SpookiesCareers.html">Careers</a></li>
 			<li><a href= "visitUs.html">Visit Us</a></li>
@@ -90,7 +86,7 @@
 	</nav>
 </header>
 
-<body onload="hideSubs()">
+<body onload="hideContent()">
 
 	<main>
     <h1>SHOP</h1>
@@ -119,13 +115,13 @@
 					</table>
 				</div>
 
-				<div id="subscriptions">
+				<div id="shop2">
 					<table class = "prod">
 						<table class = "prod">
 							<tr class = "prod">
-								<td class = "prod">Subscription 1</td>
-								<td class = "prod">Subscription 2</td>
-								<td class = "prod">Subscription 3</td>
+								<td class = "prod">Product 10</td>
+								<td class = "prod">Product 11</td>
+								<td class = "prod">Product 12</td>
 							</tr>
 						</table>
 					</table>
@@ -139,7 +135,7 @@
                    <li><a href="#">Shipping Information</a></li>
                    <li><a href="#">Check Order Status</a> </li>
                     <li><a href="#">FAQ</a> </li>
-                    <li><a href="#">Privacy Policy</a> </li> 
+                    <li><a href="#">Privacy Policy</a> </li>
                 </ul>
             </nav>
         <div >
@@ -153,7 +149,7 @@
             <!--Social Media/Email Links-->
             </tr>
 			</table>
-            
+
         </div>
     </footer>
 </body>
