@@ -42,7 +42,6 @@
 		}
 		input[type=number]::-webkit-inner-spin-button,
 		input[type=number]::-webkit-outer-spin-button {
-
    		opacity: 1;
 		}
 @media screen and (max-width : 396px ){
@@ -73,17 +72,9 @@
 	}
 
 	.cartBtn {
+		background:none;
+		border:none;
 		cursor:pointer;
-		font-family: "Luminari", cursive;
-		background-color: #4FF136;
-		color: white;
-		margin-top: 10px;
-		margin-left: 10px;
-		width: 30%;
-		height: 10%;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
 	}
 	#count0, #count1, #count2, #count3, #count4, #count5, #count6, #count7,
 	#count8, #count9, #count10, #count11 {
@@ -91,7 +82,43 @@
 		font-family: Arial, Helvetica, sans-serif;
 		font-size:.9em;
 	}
+	#cartTotal {
+		text-align:center;
+		font-size:2em;
+		color:black;
+	}
 
+	.cartContainer {
+		margin: auto;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+	}
+
+	.cartContainer button {
+  	background-color: #4CAF50;
+  	border: 1px solid green;
+		font-family:inherit;
+		font-size:1.25em;
+  	color: white;
+  	padding: 10px 24px;
+  	cursor: pointer;
+  	float: left;
+	}
+
+	.cartContainer button:not(:last-child) {
+  	border-right: none;
+	}
+
+	.cartContainer:after {
+  	content: "";
+  	clear: both;
+  	display: table;
+	}
+
+	.cartContainer button:hover {
+  	background-color: #3e8e41;
+	}
 
   </style>
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -115,16 +142,82 @@
 	}
 
 		var prodCt = Array(12).fill(+0);
+		var prodPrice = [4.99, 6.99, 12.99, 4.99, 3.99, 4.99, 6.99, 8.99, 15.99,
+										 7.99, 9.99, 8.99]
 
 		function addCart(num1, num2) {
 			var int2 = +num2;
 			prodCt[num1] = prodCt[num1] + int2;
 			var str = num1.toString();
 			document.getElementById("count" + str).innerHTML =
-			"Amount: " + prodCt[num1];
+			prodCt[num1] + "x";
+			updateCart();
 		}
 
+		function clearCart() {
+			for (var j = 0; j < prodCt.length; j++) {
+				prodCt[j] = 0;
+				var strj = j.toString();
+				document.getElementById("count" + strj).innerHTML =
+				prodCt[j] + "x";
+			}
+			updateCart();
+		}
 
+		function updateCart() {
+			document.getElementById("cartTotal").innerHTML =
+			"Total: $" + returnTotal().toFixed(2);
+		}
+
+		function returnTotal() {
+			var total = 0;
+			for (var i = 0; i < prodCt.length; i++) {
+				var stri = i.toString();
+				total += prodCt[i] * prodPrice[i];
+			}
+			return total;
+		}
+
+		function displayItems() {
+			alert(
+				"Order Summary:\nBloodcurdling Black Licorice: $4.99, " + prodCt[0] + "x: $" + (prodCt[0] * prodPrice[0]).toFixed(2) + "\n"
+				+ "Witches Brew Black Licorice Flowers: $6.99, " + prodCt[1] + "x: $" + (prodCt[1] * prodPrice[1]).toFixed(2) + "\n"
+				+ "Spookies Special Secret Halloween Bundle: $12.99, " + prodCt[2] + "x: $" + (prodCt[2] * prodPrice[2]).toFixed(2) + "\n"
+				+ "Spinechilling Sour Pops: $4.99, " + prodCt[3] + "x: $" + (prodCt[3] * prodPrice[3]).toFixed(2) + "\n"
+				+ "Supernatural Sour Drops: $3.99, " + prodCt[4] + "x: $" + (prodCt[4] * prodPrice[4]).toFixed(2) + "\n"
+				+ "Magic Beans: $4.99, " + prodCt[5] + "x: $" + (prodCt[5] * prodPrice[5]).toFixed(2) + "\n"
+				+ "Shuddersome Sugar Plums: $6.99, " + prodCt[6] + "x: $" + (prodCt[6] * prodPrice[6]).toFixed(2) + "\n"
+				+ "Extra Large Lolli: $8.99, " + prodCt[7] + "x: $" + (prodCt[7] * prodPrice[7]).toFixed(2) + "\n"
+				+ "Spookies Autumn Selects: $15.99, " + prodCt[8] + "x: $" + (prodCt[8] * prodPrice[8]).toFixed(2) + "\n"
+				+ "Monstrous Meringues: $7.99, " + prodCt[9] + "x: $" + (prodCt[9] * prodPrice[9]).toFixed(2) + "\n"
+				+ "The Original Spookies: $9.99, " + prodCt[10] + "x: $" + (prodCt[10] * prodPrice[10]).toFixed(2) + "\n"
+				+ "Villainous Vegan Spookies: $8.99, " + prodCt[11] + "x: $" + (prodCt[11] * prodPrice[11]).toFixed(2));
+		}
+
+		function order() {
+			if (returnTotal() == 0) {
+				alert("You have nothing in the cart!");
+				return;
+			}
+			var email = prompt("Enter your PayPal email address", "example@domain.com");
+			if (email == "") {
+				alert("Field cannot be empty!");
+				order();
+			} else if (email == null){
+				return;
+			}
+      var mailadd = prompt("Enter your mailing address", "555 Scary St. Salem MA 01970");
+     	if (mailadd == ""){
+				alert("Field cannot be empty!");
+				order();
+			} else if (mailadd == null){
+				return;
+			}
+			var orderNum =Math.floor(Math.random() * (100000) + 1);
+			alert("Order #" + orderNum + " confirmed!\nYour PayPal account will be charged $"
+						+ returnTotal().toFixed(2) + "\nYour delivery should arrive in the next 5-7 business days."
+						+ "\nThank you for shopping at Spookies!");
+		}
   </script>
 </head>
 
@@ -159,133 +252,133 @@
 						<tr class = "prod">
 							<td class = "prod">
 								<img alt = "Black Licorice" src="Product1.png" class="images">
-								Bloodcurdling Black Licorice
+								Bloodcurdling Black Licorice $4.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order1" id="order1" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(0, document.getElementById('order1').value)">
 										<span>Add to Cart</span>
 									</button>
-									<div id="count0"></div>
+									<div id="count0">0x</div>
 							  </div>
 							</td>
 
 							<td class = "prod">
 								<img alt = "Black Licorice Flowers" src="Product2.png" class="images">
-								Witches Brew Black Licorice Flowers
+								Witches Brew Black Licorice Flowers $6.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order2" id="order2" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(1, document.getElementById('order2').value)">
 										<span>Add to Cart</span>
 									</button>
-									<div id="count1"></div>
+									<div id="count1">0x</div>
 							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Halloween Bundle" src="Product9.png" class="images">
-								Spookies Special Secret Halloween Bundle
+								Spookies Special Secret Halloween Bundle $12.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order3" id="order3" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(2, document.getElementById('order3').value)">
 										<span>Add to Cart</span>
 									</button>
-									<div id="count2"></div>
+									<div id="count2">0x</div>
 							  </div>
 							</td>
 						</tr>
 						<tr class = "prod">
 							<td class = "prod">
 								<img alt = "Spookies Sour Pops" src="Product4.png" class="images">
-								Spinechilling Sour Pops
+								Spinechilling Sour Pops $4.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order4" id="order4" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(3, document.getElementById('order4').value)">
 										<span>Add to Cart</span>
 									</button>
-										<div id="count3"></div>
+										<div id="count3">0x</div>
 							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Super Sour Drops" src="Product5.png" class="images">
-								Supernatural Sour Drops
+								Supernatural Sour Drops $3.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order5" id="order5" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(4, document.getElementById('order5').value)">
 										<span>Add to Cart</span>
 									</button>
-										<div id="count4"></div>
+										<div id="count4">0x</div>
 							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Sour Jelly Beans" src="Product6.png" class="images">
-								Magic Beans ;)
+								Magic Beans ;) $4.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order6" id="order6" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(5, document.getElementById('order6').value)">
 										<span>Add to Cart</span>
 									</button>
-										<div id="count5"></div>
+										<div id="count5">0x</div>
 							  </div>
 						</td>
 						</tr>
 						<tr class = "prod">
 							<td class = "prod">
 								<img alt = "Spookies Sugar Plums" src="Product7.png" class="images">
-								Shuddersome Sugar Plums
+								Shuddersome Sugar Plums $6.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order7" id="order7" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(6, document.getElementById('order7').value)">
 										<span>Add to Cart</span>
 									</button>
-									<div id="count6"></div>
+									<div id="count6">0x</div>
 							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Extra Large Lollipop" src="Product8.png" class="images">
-								Extra Large Lolli
+								Extra Large Lolli $8.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order8" id="order8" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(7, document.getElementById('order8').value)">
 										<span>Add to Cart</span>
 									</button>
-									<div id="count7"></div>
+									<div id="count7">0x</div>
 							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Autumn Selects" src="Product3.png" class="images">
-								Spookies Autumn Selects
+								Spookies Autumn Selects $15.99
 								<br>
 								<div class="btnContainer2">
 									Quantity
 									<input type="number" name="order9" id="order9" value="1" min="1" max="999">
-									<button class="cartBtn"
+									<button class=".cartBtn"
 												  onclick="addCart(8, document.getElementById('order9').value)">
 										<span>Add to Cart</span>
 									</button>
-									<div id="count8"></div>
+									<div id="count8">0x</div>
 							  </div>
 							</td>
 						</tr>
@@ -298,49 +391,55 @@
 							<tr class = "prod">
 								<td class = "prod">
 									<img alt = "Spookies Meringues" src="Product10.png" class="images">
-									Monstrous Meringues
+									Monstrous Meringues $7.99
 									<br>
 									<div class="btnContainer2">
 										Quantity
 										<input type="number" name="order10" id="order10" value="1" min="1" max="999">
-										<button class="cartBtn"
+										<button class=".cartBtn"
 													  onclick="addCart(9, document.getElementById('order10').value)">
 											<span>Add to Cart</span>
 										</button>
-											<div id="count9"></div>
+											<div id="count9">0x</div>
 								  </div>
 								</td>
 								<td class = "prod">
 									<img alt = "The Original Spookies" src="Product11.png" class="images">
-									The Original Spookies
+									The Original Spookies $9.99
 									<br>
 									<div class="btnContainer2">
 										Quantity
 										<input type="number" name="order11" id="order11" value="1" min="1" max="999">
-										<button class="cartBtn"
+										<button class=".cartBtn"
 													  onclick="addCart(10, document.getElementById('order11').value)">
 											<span>Add to Cart</span>
 										</button>
-											<div id="count10"></div>
+											<div id="count10">0x</div>
 								  </div>
 								</td>
 								<td class = "prod">
 									<img alt = "Vegan Spookies" src="Product12.png" class="images">
-									Villainous Vegan Spookies
+									Villainous Vegan Spookies $8.99
 									<br>
 									<div class="btnContainer2">
 										Quantity
 										<input type="number" name="order12" id="order12" value="1" min="1" max="999">
-										<button class="cartBtn"
+										<button class=".cartBtn"
 													  onclick="addCart(11, document.getElementById('order12').value)">
 											<span>Add to Cart</span>
 										</button>
-										<div id="count11"></div>
+										<div id="count11"0x></div>
 								  </div>
 								</td>
 							</tr>
 						</table>
 					</table>
+				</div>
+				<div id="cartTotal"></div>
+				<div class="cartContainer">
+  				<button onclick="clearCart()">Clear Cart</button>
+  				<button onclick="displayItems()">View Cart</button>
+  				<button onclick="order()">Order</button>
 				</div>
 	</main>
 
@@ -358,9 +457,9 @@
 			<table class="SocialIconBar">
             <tr>
 				<td>Spookies Candy Company &reg;, 2020</td>
-              	<td><a href="https://www.facebook.com" target="_blank"> <img alt = "facebook" src="facebookk.png" class = "socialicons"></a></td>
-               <td> <a href="https://www.instagram.com" target="_blank"> <img  src="instagramm.png" alt = "instagram" class = "socialicons"></a></td>
-                <td><a href="https://www.twitter.com" target="_blank" ><img alt = "twitter" src="twitterr.png" class = "socialicons"></a></td>
+              	<td><a href="https://www.facebook.com" target="_blank"><img alt = "facebook" src="facebookk.png" class = "socialicons"></a></td>
+               <td> <a href="https://www.instagram.com" target="_blank"><img  src="instagramm.png" alt = "instagram" class = "socialicons"></a></td>
+                <td><a href="https://www.twitter.com" target="_blank"><img alt = "twitter" src="twitterr.png" class = "socialicons"></a></td>
                 <td><a href="https://www.pinterest.com" target="_blank"> <img alt = "pinterest" src="pinterestt.png" class = "socialicons"></a></td>
             <!--Social Media/Email Links-->
             </tr>
