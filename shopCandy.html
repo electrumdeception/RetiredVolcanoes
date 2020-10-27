@@ -34,7 +34,7 @@
 		}
 		td.prod {
 			text-align:center;
-			font-size:1.25em;
+			font-size:1.5em;
 		}
 		td.prod img {
 			max-height:50%;
@@ -67,28 +67,44 @@
 		display:inline-block;
 		margin-left:auto;
 		margin-right:auto;
+		color:black;
+		font-size:.75em;
+	}
+	#count0, #count1, #count2, #count3, #count4, #count5, #count6, #count7,
+	#count8, #count9, #count10, #count11 {
+		margin-top:.25em;
 	}
   </style>
-
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script language="javascript">
-		function hideContent() {
-			document.getElementById("shop2").style.display = "none";
+	function hideContent() {
+		document.getElementById("shop2").style.display = "none";
+	}
+
+	function toggle1() {
+		document.getElementById("button1").style.backgroundColor = "#FC8324";
+		document.getElementById("button2").style.backgroundColor = "#FFFFFF";
+		document.getElementById("shop").style.display = "block";
+		document.getElementById("shop2").style.display = "none";
+	}
+
+	function toggle2() {
+		document.getElementById("button2").style.backgroundColor = "#FC8324";
+		document.getElementById("button1").style.backgroundColor = "#FFFFFF";
+		document.getElementById("shop").style.display = "none";
+		document.getElementById("shop2").style.display = "block";
+	}
+
+		var prodCt = Array(12).fill(+0);
+
+		function addCart(num1, num2) {
+			var int2 = +num2;
+			prodCt[num1] = prodCt[num1] + int2;
+			var str = num1.toString();
+			document.getElementById("count" + str).innerHTML =
+			"Amt: " + prodCt[num1];
 		}
 
-		function toggle1() {
-			document.getElementById("button1").style.backgroundColor = "#FC8324";
-			document.getElementById("button2").style.backgroundColor = "#FFFFFF";
-			document.getElementById("shop").style.display = "block";
-			document.getElementById("shop2").style.display = "none";
-		}
-
-		function toggle2() {
-			document.getElementById("button2").style.backgroundColor = "#FC8324";
-			document.getElementById("button1").style.backgroundColor = "#FFFFFF";
-			"For even more treats!";
-			document.getElementById("shop").style.display = "none";
-			document.getElementById("shop2").style.display = "block";
-		}
 
   </script>
 </head>
@@ -125,78 +141,141 @@
 							<td class = "prod">
 								<img alt = "Black Licorice" src="Product1.png" class="images">
 								Bloodcurdling Black Licorice
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order1" id="order1" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(0, document.getElementById('order1').value)">
+									<div id="count0"></div>
+							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Black Licorice Flowers" src="Product2.png" class="images">
 								Witches Brew Black Licorice Flowers
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order2" id="order2" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(1, document.getElementById('order2').value)">
+									<div id="count1"></div>
+							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Halloween Bundle" src="Product9.png" class="images">
 								Spookies Special Secret Halloween Bundle
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order3" id="order3" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(2, document.getElementById('order3').value)">
+									<div id="count2"></div>
+							  </div>
 							</td>
 						</tr>
 						<tr class = "prod">
 							<td class = "prod">
 								<img alt = "Spookies Sour Pops" src="Product4.png" class="images">
 								Spinechilling Sour Pops
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order4" id="order4" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(3, document.getElementById('order4').value)">
+										<div id="count3"></div>
+							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Super Sour Drops" src="Product5.png" class="images">
 								Supernatural Sour Drops
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order5" id="order5" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(4, document.getElementById('order5').value)">
+										<div id="count4"></div>
+							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Sour Jelly Beans" src="Product6.png" class="images">
 								Magic Beans ;)
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order6" id="order6" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(5, document.getElementById('order6').value)">
+										<div id="count5"></div>
+							  </div>
 						</td>
 						</tr>
 						<tr class = "prod">
 							<td class = "prod">
 								<img alt = "Spookies Sugar Plums" src="Product7.png" class="images">
 								Shuddersome Sugar Plums
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order7" id="order7" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(6, document.getElementById('order7').value)">
+									<div id="count6"></div>
+							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Extra Large Lollipop" src="Product8.png" class="images">
 								Extra Large Lolli
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order8" id="order8" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(7, document.getElementById('order8').value)">
+									<div id="count7"></div>
+							  </div>
 							</td>
 							<td class = "prod">
 								<img alt = "Spookies Autumn Selects" src="Product3.png" class="images">
 								Spookies Autumn Selects
-								<br><div class="btnContainer2">
-								<input type="number" name="orderNum" value="1" min="1" max="999">
-								<img alt = "Black Licorice" src="cart.svg"
-										 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+								<br>
+								<div class="btnContainer2">
+									Quantity
+									<input type="number" name="order9" id="order9" value="1" min="1" max="999"
+												 style="margin-right:1em">
+									Add to Cart
+									<input type="image" name= "cart" src="cart.svg"
+										 		 style="width:2em;height:2em;position:relative;top:.5em;"
+												 onclick="addCart(8, document.getElementById('order9').value)">
+									<div id="count8"></div>
+							  </div>
 							</td>
 						</tr>
 					</table>
@@ -209,26 +288,47 @@
 								<td class = "prod">
 									<img alt = "Spookies Meringues" src="Product10.png" class="images">
 									Monstrous Meringues
-									<br><div class="btnContainer2">
-									<input type="number" name="orderNum" value="1" min="1" max="999">
-									<img alt = "Black Licorice" src="cart.svg"
-											 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+									<br>
+									<div class="btnContainer2">
+										Quantity
+										<input type="number" name="order10" id="order10" value="1" min="1" max="999"
+													 style="margin-right:1em">
+										Add to Cart
+										<input type="image" name= "cart" src="cart.svg"
+											 		 style="width:2em;height:2em;position:relative;top:.5em;"
+													 onclick="addCart(9, document.getElementById('order10').value)">
+											<div id="count9"></div>
+								  </div>
 								</td>
 								<td class = "prod">
 									<img alt = "The Original Spookies" src="Product11.png" class="images">
 									The Original Spookies
-									<br><div class="btnContainer2">
-									<input type="number" name="orderNum" value="1" min="1" max="999">
-									<img alt = "Black Licorice" src="cart.svg"
-											 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+									<br>
+									<div class="btnContainer2">
+										Quantity
+										<input type="number" name="order11" id="order11" value="1" min="1" max="999"
+													 style="margin-right:1em">
+										Add to Cart
+										<input type="image" name= "cart" src="cart.svg"
+											 		 style="width:2em;height:2em;position:relative;top:.5em;"
+													 onclick="addCart(10, document.getElementById('order11').value)">
+											<div id="count10"></div>
+								  </div>
 								</td>
 								<td class = "prod">
 									<img alt = "Vegan Spookies" src="Product12.png" class="images">
 									Villainous Vegan Spookies
-									<br><div class="btnContainer2">
-									<input type="number" name="orderNum" value="1" min="1" max="999">
-									<img alt = "Black Licorice" src="cart.svg"
-											 style="width:1.5em;height:1.5em;position:relative;top:.5em;"></div>
+									<br>
+									<div class="btnContainer2">
+										Quantity
+										<input type="number" name="order12" id="order12" value="1" min="1" max="999"
+													 style="margin-right:1em">
+										Add to Cart
+										<input type="image" name= "cart" src="cart.svg"
+											 		 style="width:2em;height:2em;position:relative;top:.5em;"
+													 onclick="addCart(11, document.getElementById('order12').value)">
+										<div id="count11"></div>
+								  </div>
 								</td>
 							</tr>
 						</table>
