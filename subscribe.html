@@ -121,20 +121,20 @@
 		<form id="newSubscriber" style = " text-align: center; color: #000000; font-size:22px">
 			<label for="MonthType">How many Months?</label><br>
 			<label for="3mo">3</label>
-			<input type="radio" id="3mo" name = "monthType" value ="3mo">
+			<input type="radio" id="3mo" name = "monthType" value ="3mo" required>
 			<label for="6mo">6</label>
-			<input type="radio" id="6mo" name = "monthType" value = "6mo">
+			<input type="radio" id="6mo" name = "monthType" value = "6mo" required>
 			<label for="12mo">12</label>
-			<input type="radio" id="12mo" name = "monthType" value = "12mo"><br>
+			<input type="radio" id="12mo" name = "monthType" value = "12mo" required><br>
 			<label for="email">What email do you use with paypal?</label><br>
-			<input type = "email" id="email" name = "email" value="me@spookies.com" onfocus="this.value=''"> <br>
+			<input type = "email" id="email" name = "email" value="me@spookies.com" onfocus="this.value=''" required> <br>
 			<label for="text">Mailing Address</label><br>
-			<input style = "height:50px" type = "text" id = "address" name = "address" value="555 Scary St; Salem MA 01970" onfocus="this.value=''"><br>
+			<input style = "height:50px" type = "text" id = "address" name = "address" value="555 Scary St; Salem MA 01970" onfocus="this.value=''" required><br>
 			<label for="gift">This is a gift:</label><br>
 			<label for="yes">Yes:</label>
-			<input type="radio" name="gift" id ="yes" value = "yes">
+			<input type="radio" name="gift" id ="yes" value = "yes" required>
 			<label for="no">No:</label>
-			<input type="radio" name="gift" id = "no" value = "no"><br>
+			<input type="radio" name="gift" id = "no" value = "no" required><br>
 			<input type="button" name="order" id="order" value = "Submit order" onClick="reportOrder(monthType.value)">
 		</form>
 		<div id="cost" style="text-align: center; font-size: 24px; color: #000000;"></div>
