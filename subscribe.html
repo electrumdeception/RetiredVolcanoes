@@ -36,10 +36,47 @@
 		max-width:100%;
 		max-height:100%;
 	}
+		input[type=text], input[type=tel], input[type=email], textarea {
+           	font-family:"Luminari","zsazsa-galore",  cursive ;
+	    width: 50%;
+            padding: 12px;  
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+            box-sizing: border-box; 
+            margin-top: 6px; 
+            margin-bottom: 16px; 
+            resize: vertical 
+        }
+        input[type=submit] {
+	font-family:"Luminari","cursive;
+            background-color: #4FF136;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+			font-size: 28px;
+		}
 
   </style>
-
+	
   <script language="javascript">
+	  function reportOrder(numMo){
+		  var completeStr;
+		  var baseStr = "You will recieve a paypal request for: $";
+		  var endStr = "\nOnce the request has been filled your subscription will start. \nBoxes ship on the 14th of every month.\nYou will also recieve an email receipt"
+		  var orderNum =Math.floor(Math.random() * (100000) + 1);
+		  var orderNumStr= "\nYour order Number is: " + orderNum;
+		   
+		  if (numMo == 3)
+			  completeStr = baseStr + "90.00" + orderNum + endStr;
+		  else if (numMo == 6)
+			  completeStr = baseStr + "175.00" + orderNumStr + endStr;
+		  else 
+			  completeStr = baseStr + "320.00 " + orderNumStr + endStr;
+//		  document.getElementById("cost").innerHTML = completeStr;
+			alert(completeStr);  
+	  }
   </script>
 </head>
 
@@ -80,6 +117,28 @@
 					</table>
 				</table>
 			</div>
+		<div id= "container">
+		<form id="newSubscriber" style = " text-align: center; color: #000000; font-size:22px">
+			<label for="MonthType">How many Months?</label><br>
+			<label for="3mo">3</label>
+			<input type="radio" id="3mo" name = "monthType" value ="3mo">
+			<label for="6mo">6</label>
+			<input type="radio" id="6mo" name = "monthType" value = "6mo">
+			<label for="12mo">12</label>
+			<input type="radio" id="12mo" name = "monthType" value = "12mo"><br>
+			<label for="email">What email do you use with paypal?</label><br>
+			<input type = "email" id="email" name = "email" value="me@spookies.com" onfocus="this.value=''"> <br>
+			<label for="text">Mailing Address</label><br>
+			<input style = "height:50px" type = "text" id = "address" name = "address" value="555 Scary St; Salem MA 01970" onfocus="this.value=''"><br>
+			<label for="gift">This is a gift:</label><br>
+			<label for="yes">Yes:</label>
+			<input type="radio" name="gift" id ="yes" value = "yes">
+			<label for="no">No:</label>
+			<input type="radio" name="gift" id = "no" value = "no"><br>
+			<input type="button" name="order" id="order" value = "Submit order" onClick="reportOrder(monthType.value)">
+		</form>
+		<div id="cost" style="text-align: center; font-size: 24px; color: #000000;"></div>
+	</div>
 	</main>
 
 	<footer>
@@ -108,3 +167,4 @@
     </footer>
 </body>
 </html>
+
