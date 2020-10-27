@@ -12,16 +12,18 @@
 			text-align:center;
 		}
 		.button {
-			padding:30px;
+			padding:20px;
 			margin:1em 2px;
 			border:none;
 			border-radius:50%;
 		}
 		#button1 {
-			background-color:#FFFFFF;
+			/*background-color:#FFFFFF;*/
+			background-color:#FC8324;
 		}
 		#button2 {
-			background-color:#FC8324;
+			background-color:#FFFFFF;
+			/*background-color:#FC8324;*/
 		}
 		table.prod {
 			margin-left:auto;
@@ -63,15 +65,15 @@
 		}
 
 		function toggle1() {
-			document.getElementById("button1").style.backgroundColor = "#FFFFFF";
-			document.getElementById("button2").style.backgroundColor = "#FC8324";
+			document.getElementById("button1").style.backgroundColor = "#FC8324";
+			document.getElementById("button2").style.backgroundColor = "#FFFFFF";
 			document.getElementById("shop").style.display = "block";
 			document.getElementById("shop2").style.display = "none";
 		}
 
 		function toggle2() {
-			document.getElementById("button2").style.backgroundColor = "#FFFFFF";
-			document.getElementById("button1").style.backgroundColor = "#FC8324";
+			document.getElementById("button2").style.backgroundColor = "#FC8324";
+			document.getElementById("button1").style.backgroundColor = "#FFFFFF";
 			"For even more treats!";
 			document.getElementById("shop").style.display = "none";
 			document.getElementById("shop2").style.display = "block";
