@@ -48,15 +48,27 @@
             resize: vertical 
         }
         input[type=submit] {
-	font-family:"Luminari","cursive;
+	    font-family:"Luminari",cursive;
             background-color: #4FF136;
             color: white;
             padding: 12px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-			font-size: 28px;
+		font-size: 28px;
 		}
+	.submit {
+            font-family: "Luminari", cursive;
+            background-color: #4FF136;
+            color: white;
+            margin-top: 20px;
+            width: 10%;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding:5px;
+            font-size: 60%;
+        }
 
   </style>
 	
@@ -135,7 +147,7 @@
 			<input type="radio" name="gift" id ="yes" value = "yes" required>
 			<label for="no">No:</label>
 			<input type="radio" name="gift" id = "no" value = "no" required><br>
-			<input type="button" name="order" id="order" value = "Submit order" onClick="reportOrder(monthType.value)">
+			<input class="submit" type="button" name="order" id="order" value = "Submit order" onClick="reportOrder(monthType.value)">
 		</form>
 		<div id="cost" style="text-align: center; font-size: 24px; color: #000000;"></div>
 	</div>
